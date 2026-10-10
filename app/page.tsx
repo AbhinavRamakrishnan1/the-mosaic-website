@@ -7,6 +7,7 @@ import { AnimatedStats } from '@/components/AnimatedStats';
 import { CommunityExplorer } from '@/components/CommunityExplorer';
 import { JoinMosaicModal } from '@/components/JoinMosaicModal';
 import { BuiltTimeline } from '@/components/BuiltTimeline';
+import { site } from '@/data/site';
 
 export default function Home() {
   return <div className="home-shell">
@@ -37,7 +38,7 @@ export default function Home() {
       <CommunityExplorer countries={countries} />
     </section>
     <section className="home-section participation-section">
-      <p className="eyebrow">Take part</p><h2>Find your way in</h2><div className="participation-links"><a href="https://docs.google.com/forms/d/e/1FAIpQLScSBmS2nqLoalGSFGu5-gYaku11D2MHPzoY-8u0Dh3ZIYxVtA/viewform">Join The Mosaic →</a><Link href="/blog#submit">Submit writing →</Link><Link href="/contact">Collaborate with us →</Link></div>
+      <p className="eyebrow">Take part</p><h2>Be Part of The Mosaic</h2><div className="participation-links"><a href="/blog">Read and explore stories →</a><a href={site.submissionUrl} target="_blank" rel="noreferrer">Share Your Story →</a><a href="/contact">Collaborate with us →</a></div>
     </section>
   </div>;
 }
