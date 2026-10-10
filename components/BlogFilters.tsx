@@ -15,6 +15,7 @@ export function BlogFilters({ posts }: { posts: BlogPost[] }) {
   }), [posts, query, topic]);
 
   return <>
+    <p className="sr-only" aria-live="polite" aria-atomic="true">{filtered.length} {filtered.length === 1 ? 'story' : 'stories'} found.</p>
     <div className="blog-controls" role="search">
       <label><span>Search stories</span><input value={query} onChange={event => setQuery(event.target.value)} placeholder="Search by title, author, or topic" /></label>
       <label><span>Topic</span><select value={topic} onChange={event => setTopic(event.target.value)}>{topics.map(item => <option key={item}>{item}</option>)}</select></label>

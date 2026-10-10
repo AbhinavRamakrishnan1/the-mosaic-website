@@ -15,8 +15,8 @@ export function SiteHeader() {
       <nav className="desktop-nav" aria-label="Main navigation">
         {navigation.map(item => <Link href={item.href} key={item.label}>{item.label}</Link>)}
       </nav>
-      <button className="menu-button" aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
+      <button className="menu-button" type="button" aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen(!open)}>{open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}</button>
     </div>
-    {open && <nav className="mobile-nav" aria-label="Mobile navigation">{navigation.map(item => <div key={item.label}><Link href={item.href} onClick={() => setOpen(false)}>{item.label}</Link></div>)}</nav>}
+    {open && <nav className="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation">{navigation.map(item => <div key={item.label}><Link href={item.href} onClick={() => setOpen(false)}>{item.label}</Link></div>)}</nav>}
   </header>;
 }

@@ -8,6 +8,7 @@ export function MemberSearch({ members }: { members: string[] }) {
 
   return <>
     <div className="member-search"><label htmlFor="member-search-input">Find a member</label><input id="member-search-input" value={query} onChange={event => setQuery(event.target.value)} placeholder="Search by name" /></div>
+    <p className="sr-only" aria-live="polite" aria-atomic="true">{filtered.length} {filtered.length === 1 ? 'member' : 'members'} found.</p>
     {filtered.length ? <div className="member-list">{filtered.map(member => <span key={member}>{member}</span>)}</div> : <p className="member-empty">No members match “{query}”.</p>}
   </>;
 }
