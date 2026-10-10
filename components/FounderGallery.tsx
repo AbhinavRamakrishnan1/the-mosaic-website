@@ -14,7 +14,7 @@ export function FounderGallery() {
   const photo = photos[active];
 
   return <div className="founder-gallery">
-    <Image className="founder-photo" src={photo.src} alt={photo.alt} width={360} height={440} priority={active === 0} />
+    <Image className={`founder-photo founder-photo-${active}`} src={photo.src} alt={photo.alt} width={360} height={440} priority={active === 0} />
     <button className="founder-gallery-button" type="button" aria-label="Show next founder photo" onClick={() => setActive(current => (current + 1) % photos.length)}>→</button>
     <span className="founder-gallery-count" aria-live="polite">{active + 1} / {photos.length}</span>
   </div>;
