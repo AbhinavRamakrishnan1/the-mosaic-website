@@ -1,3 +1,6 @@
+import type { Metadata } from 'next';
 import { site } from '@/data/site';
+
+export const metadata: Metadata = { title: 'Submit Your Writing | The Mosaic', description: 'Share an original reflection, cultural experience, opinion, or creative piece with The Mosaic.', alternates: { canonical: '/submit' }, openGraph: { title: 'Submit Your Writing | The Mosaic', description: 'Share your perspective with The Mosaic.', url: '/submit', type: 'website' } };
 
 export default function SubmitPage() { return <div className="page-shell plain-content submit-page"><p className="eyebrow">Share your perspective</p><h1>Submit Your Writing</h1><p className="intro">Every perspective adds something to the bigger picture. The Mosaic welcomes original reflections, cultural experiences, opinions, and creative pieces.</p><section className="submit-guidance"><h2>Before you submit</h2><ul><li>Send writing that is your own original work.</li><li>Choose a piece connected to perspective, culture, community, education, or youth voice.</li><li>Review your work before submitting it through the form.</li><li>Submissions are reviewed; publication is not guaranteed.</li></ul></section><a className="join-button" href={site.submissionUrl} target="_blank" rel="noreferrer">Open the submission form →</a></div>; }

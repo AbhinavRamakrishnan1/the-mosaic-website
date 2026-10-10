@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import { blogPosts } from '@/data/blog';
 import { focusAreas } from '@/data/focus';
 import { countries } from '@/data/community';
@@ -8,6 +9,13 @@ import { CommunityExplorer } from '@/components/CommunityExplorer';
 import { JoinMosaicModal } from '@/components/JoinMosaicModal';
 import { BuiltTimeline } from '@/components/BuiltTimeline';
 import { site } from '@/data/site';
+
+export const metadata: Metadata = {
+  title: 'The Mosaic | Global Student Community',
+  description: 'The Mosaic is a student-led international community founded by Abhinav Ramakrishnan, connecting students through stories, cultural exchange, and shared purpose.',
+  alternates: { canonical: '/' },
+  openGraph: { title: 'The Mosaic | Global Student Community', description: 'A student-led international community founded by Abhinav Ramakrishnan.', url: '/', type: 'website' },
+};
 
 export default function Home() {
   return <div className="home-shell">

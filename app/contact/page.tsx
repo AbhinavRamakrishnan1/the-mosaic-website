@@ -1,2 +1,4 @@
+import type { Metadata } from 'next';
 import { site } from '@/data/site';
+export const metadata: Metadata = { title: 'Contact The Mosaic', description: 'Contact The Mosaic about storytelling, cultural exchange, educational opportunity, community engagement, or getting involved.', alternates: { canonical: '/contact' }, openGraph: { title: 'Contact The Mosaic', description: 'Get in touch with The Mosaic.', url: '/contact', type: 'website' } };
 export default function ContactPage(){return <div className="page-shell plain-content"><h1>Contact</h1><p>We would love to hear from you. For questions about The Mosaic, our focus areas, or becoming involved, please reach out.</p><p><a href={`mailto:${site.email}`}>{site.email}</a></p><p>Find us on <a href={site.social.linkedin}>LinkedIn</a>.</p></div>}
