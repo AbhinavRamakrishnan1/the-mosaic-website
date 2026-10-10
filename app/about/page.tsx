@@ -1,4 +1,5 @@
 import { PageHeading } from '@/components/PageHeading';
+import { BuiltTimeline } from '@/components/BuiltTimeline';
 
 export default function AboutPage() {
   return <div className="page-shell plain-content">
@@ -12,6 +13,7 @@ export default function AboutPage() {
     <p>Our mission centers on two goals:</p>
     <ol><li><strong>Connecting communities.</strong> We want to bring people from different cultural and social backgrounds together, encouraging conversations that challenge assumptions, build empathy, and create genuine relationships.</li><li><strong>Turning understanding into action.</strong> By sharing personal experiences and highlighting community needs, we hope to inspire young people to become more involved, whether through volunteering, educational outreach, or initiatives of their own.</li></ol>
     <p>We don&apos;t believe making a difference always requires grand gestures. Sometimes, it begins with a conversation, a shared experience, or simply taking the time to hear someone else&apos;s story.</p>
+    <section className="about-built"><p className="eyebrow">Evidence of progress</p><h2>What We&apos;ve Built</h2><BuiltTimeline /></section>
     <h2>Letter From the Founder</h2>
     <h3>How It All Started</h3>
     <p>I&apos;ve always found it interesting how much we can know about the world while knowing so little about the people around us.</p>
