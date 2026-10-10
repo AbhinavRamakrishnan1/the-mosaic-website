@@ -1,0 +1,5 @@
+import Link from 'next/link';
+import Image from 'next/image';
+import { focusAreas } from '@/data/focus';
+
+export default function Home() { return <div className="home-shell"><section className="home-hero"><h1>The Mosaic</h1><p className="hero-tagline">Stories can change the world.</p><Image className="mosaic-mark" src="/mosaic-mark.png" alt="Abstract mosaic emblem" width={150} height={150} priority /><p className="hero-mission">Bringing people together through storytelling, cultural exchange, and meaningful community connections.</p></section><section className="home-section"><h2>Our Focus</h2><div className="focus-grid">{focusAreas.map(area => <article className="focus-item" key={area.title}><h3>{area.title}</h3><p>{area.description}</p></article>)}</div></section><section className="home-section"><h2>Our Community</h2><p>We connect students and communities through meaningful opportunities to learn, serve, and lead together.</p><p><Link href="/members">Meet our members →</Link></p></section></div>; }

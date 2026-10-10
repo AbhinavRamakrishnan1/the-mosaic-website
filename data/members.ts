@@ -1,0 +1,22 @@
+export const members = [
+  'Sudiksha Aalori', 'Sefu Adeyemi', 'Camille Anib', 'Kobe Aquino', 'Manha Asif', 'Nelly Awad',
+  'Ayomide Balogun', 'Genevieve Bascos-Arce', 'Solongo Batnasan', 'Callum Bennett', 'Ivette Berio',
+  'Reyansh Bhatia', 'Ishani Bhattacharya', 'Maren Caldwell', 'Anelly Cepeda', 'Akhil Chamarti',
+  'Rohan Chatterjee', 'Connor Chun', 'Srishti Dhawan', 'Amadou Diop', 'Nkosazana Dlamini',
+  'Wesley Donovan', 'Genevieve Ellis', 'Jacob Endersmith', 'Adesuwa Eze', 'Angela Feng', 'Haruka Fujimoto',
+  'Lisa Gallegos', 'Shreya Gopal', 'Jon Griffith', 'Abhi Gurunathan', 'Jiyoon Han', 'Lara Harim',
+  'Everett Hayes', 'Alex He', 'Irene Ho', 'Jayron Hu', 'Sherry Huang', 'Oliver Ibarra', 'Isra Ijaz',
+  'Saanvi Iyer', 'Sora Jeong', 'Justin Jiang', 'John Joyce', 'Eva Juneja', 'Khushi Kawedia', 'Neil Khera',
+  'Naledi Khumalo', 'Nikki Kothapalli', 'Sammith Krishna', 'Vihaan Kulkarni', 'Dhriti Kumar',
+  'Rithwick Lakshmanan', 'Natalie Lam', 'Nathan Lee', 'Elysia Li', 'Michelle Li', 'Rina Li', 'Xinyi Liang',
+  'Sabyr Magomedov', 'Ritvik Mangire', 'Stephanie Martinez-Chu', 'Nitya Mehta', 'Bongi Mekoane',
+  'Advik Menon', 'Premrudee Mepremwattana', 'Declan Mercer', 'Lila Mootabar', 'Lucia Morales',
+  'Sofia Morales', 'Tendai Moyo', 'Anuva Mundra', 'Humera Naaz', 'Hari Nair', 'Kaito Nakamura',
+  'Yuvraj Nathawat', 'Charlie Nguyen', 'Lana Nguyen', 'Scarlett Nguyen', 'Jules Nilsson', 'Zuri Nwosu',
+  'Kelsey Nyangor', 'Imani Okonkwo', 'Alessandra Pascua', 'Ananya Pathak', 'Niketa Pati', 'Eliana Prescott',
+  'Abhinav Ramakrishnan', 'Ashwant Ramasamy', 'Anvika Rao', 'Chala Reaungsanti', 'Taeyang Seo',
+  'Ethan Shen', 'Kevin Shi', 'Ankita Singh', 'Jahnavi Singh', 'Meenu Sivanandam', 'Kavya Srinivasan',
+  'Karthik Subburaju', 'Cathy Sui', 'Yuna Takahashi', 'Ray Tian', 'Neel Venkataraman', 'Steve Wang',
+  'Brielle Whitaker', 'Emma Wong', 'Meilin Xu', 'Dessie Yang', 'Lillian Yang', 'Grace Yu', 'Natalie Zhang',
+  'Ethan Zhao', 'Luke Zhong', 'Serena Zhou'
+];
