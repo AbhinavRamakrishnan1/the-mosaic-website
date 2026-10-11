@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PageHeading } from '@/components/PageHeading';
 import { BuiltTimeline } from '@/components/BuiltTimeline';
+import { members } from '@/data/members';
 
 export const metadata: Metadata = {
   title: 'About The Mosaic | Abhinav Ramakrishnan',
@@ -15,7 +16,7 @@ export default function AboutPage() {
     <p className="about-kicker"><em>Every person has a story. Every story deserves to be heard.</em></p>
     <p>The Mosaic is a student-led initiative founded on a simple belief: our differences should bring us closer, not keep us apart. Every community is shaped by people with their own experiences, traditions, challenges, and perspectives. Yet so many of these stories remain unheard, often because the people living them are never given the opportunity to share them.</p>
     <p>We created The Mosaic to change that. Through storytelling, cultural exchange, and community involvement, we hope to connect people who might otherwise never cross paths. Just as individual pieces come together to form a mosaic, we believe that understanding one another is what creates a stronger, more compassionate society.</p>
-    <p className="founder-context">The Mosaic was founded by <strong>Abhinav Ramakrishnan</strong>, a student at Monroe Township High School in New Jersey. Today, the community includes 206 members across 25 countries.</p>
+    <p className="founder-context">The Mosaic was founded by <strong>Abhinav Ramakrishnan</strong>, a student at Monroe Township High School in New Jersey. Today, the community includes {members.length} members across 25 countries.</p>
     <h2>What We Do</h2>
     <p className="about-label">Today</p>
     <p>Today, The Mosaic gives students a place to share original writing, discover perspectives from other communities, and connect through cultural exchange. Our public editorial archive, member directory, and country explorer make that work visible.</p>

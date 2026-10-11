@@ -6,7 +6,7 @@ import { members } from '@/data/members';
 
 export const metadata: Metadata = {
   title: 'Members | The Mosaic Community',
-  description: 'Meet the 206 members of The Mosaic, a student-led international community founded by Abhinav Ramakrishnan.',
+  description: `Meet the ${members.length} members of The Mosaic, a student-led international community founded by Abhinav Ramakrishnan.`,
   alternates: { canonical: '/members' },
   openGraph: { title: 'Members | The Mosaic', description: 'Meet The Mosaic community and its founder, Abhinav Ramakrishnan.', url: '/members', type: 'website' },
 };
