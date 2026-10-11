@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
-import { blogPosts } from '@/data/blog';
+import { editorialPosts } from '@/data/blog';
 import { focusAreas } from '@/data/focus';
 import { countries } from '@/data/community';
 import { AnimatedStats } from '@/components/AnimatedStats';
@@ -38,7 +38,7 @@ export default function Home() {
     </section>
     <section className="home-section featured-stories">
       <div className="section-heading-row"><div><p className="eyebrow">From the community</p><h2>Featured Stories</h2></div><Link href="/blog">View all writing →</Link></div>
-      <div className="featured-story-list">{blogPosts.slice(0, 3).map(post => <article className="featured-story" key={post.slug}><p className="blog-meta">{post.category} · {post.readTime}</p><h3><Link href={`/blog/${post.slug}`}>{post.title}</Link></h3><p>{post.excerpt}</p><p className="story-author">By {post.author}</p></article>)}</div>
+      <div className="featured-story-list">{editorialPosts.slice(0, 3).map(post => <article className="featured-story" key={post.slug}><p className="blog-meta">{post.category} · {post.readTime}</p><h3><Link href={`/blog/${post.slug}`}>{post.title}</Link></h3><p>{post.excerpt}</p><p className="story-author">By {post.author}</p></article>)}</div>
     </section>
     <section className="home-section community-section">
       <div className="section-heading-row"><div><p className="eyebrow">Across borders</p><h2>Our Community</h2></div><Link href="/members">Meet our members →</Link></div>

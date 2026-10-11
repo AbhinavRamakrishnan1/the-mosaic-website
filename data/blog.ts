@@ -21,3 +21,13 @@ const editorialContent: Record<string, string[]> = {
 
 export const blogPosts: BlogPost[] = [...editorialPicks, ...additionalBlogPosts];
 export const blogContent: Record<string, string[]> = { ...editorialContent, ...additionalBlogContent };
+export const editorialPickSlugs = [
+  'things-we-learn-to-leave-untranslated',
+  'reality-of-suburban-inclusion',
+  'debates-to-narcan',
+  'bracketed',
+  'life-measured-in-almosts',
+  'small-cruelties-being-certain',
+];
+export const editorialPosts = blogPosts.filter(post => editorialPickSlugs.includes(post.slug));
+export const archivePosts = blogPosts.filter(post => !editorialPickSlugs.includes(post.slug));
