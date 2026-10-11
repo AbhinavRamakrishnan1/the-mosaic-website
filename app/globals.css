@@ -102,7 +102,12 @@ main { min-height:60vh; }
 .blog-meta { color:var(--muted); font-size:12px !important; letter-spacing:.02em; }
 .blog-link { font-size:13px; text-decoration:underline; text-underline-offset:4px; }
 .blog-submit { border-top:1px solid var(--line); margin-top:80px; padding-top:35px; }
-.blog-archive { border-top:1px solid var(--line); margin-top:80px; padding-top:35px; }
+.blog-collections { margin-top:10px; }
+.blog-tabs { display:flex; gap:28px; border-bottom:1px solid var(--line); margin-bottom:35px; }
+.blog-tab { border:0; border-bottom:2px solid transparent; background:transparent; color:var(--muted); padding:0 0 14px; font:13px 'DM Sans',Arial,sans-serif; cursor:pointer; }
+.blog-tab:hover,.blog-tab.active { color:var(--ink); }
+.blog-tab.active { border-bottom-color:var(--ink); }
+.blog-tab-panel:focus-visible { outline:2px solid #a94d36; outline-offset:8px; }
 .archive-intro { color:var(--muted); max-width:650px !important; margin:0 0 35px !important; }
 .blog-submit h2 { margin-top:0; }
 .essay-body { max-width:700px; margin-top:52px; }
