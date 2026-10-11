@@ -9,8 +9,13 @@ export function MemberCounter({ total }: { total: number }) {
       setCount(total);
       return;
     }
-    const step = Math.max(1, Math.ceil(total / 35));
-    const timer = window.setInterval(() => setCount(current => Math.min(total, current + step)), 35);
+    const timer = window.setInterval(() => {
+      setCount(current => {
+        const next = Math.min(total, current + 1);
+        if (next === total) window.clearInterval(timer);
+        return next;
+      });
+    }, 6);
     return () => window.clearInterval(timer);
   }, [total]);
   return <p className="member-counter" aria-live="polite" aria-atomic="true"><strong>{count}</strong> members and growing</p>;
