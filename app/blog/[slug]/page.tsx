@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { blogContent, blogPosts } from '@/data/blog';
 import { site } from '@/data/site';
+import { CommentsSection } from '@/components/CommentsSection';
 
 export function generateStaticParams() { return blogPosts.map(post => ({ slug: post.slug })); }
 
@@ -30,6 +31,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     <div className="essay-body">{paragraphs.map((paragraph, index) => <p key={`${post.slug}-${index}`}>{paragraph.replace(/\uFFFD/g, '’')}</p>)}</div>
     {post.pdfPage ? <p className="pdf-download"><a href={`/mosaic-editorials.pdf#page=${post.pdfPage}`}>Download the collected editorial PDF · page {post.pdfPage} →</a></p> : null}
     <nav className="story-navigation" aria-label="Story navigation"><div>{previous ? <Link href={`/blog/${previous.slug}`}>← {previous.title}</Link> : <Link href="/blog">← All writing</Link>}</div><div>{next ? <Link href={`/blog/${next.slug}`}>{next.title} →</Link> : <Link href="/blog">All writing →</Link>}</div></nav>
+    <CommentsSection slug={post.slug} />
     <section className="article-submit"><p className="eyebrow">Have a perspective to share?</p><p>Submit your original writing to The Mosaic.</p><a href={site.submissionUrl} target="_blank" rel="noreferrer">Submit Your Writing →</a></section>
   </article>;
 }

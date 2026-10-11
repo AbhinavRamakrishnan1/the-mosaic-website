@@ -109,6 +109,23 @@ main { min-height:60vh; }
 .article-submit { border-top:1px solid var(--line); margin-top:52px; padding-top:24px; }
 .article-submit p:not(.eyebrow) { margin:0 0 12px; color:var(--muted); }
 .article-submit a { font-size:13px; text-decoration:underline; text-underline-offset:4px; }
+.comments-section { border-top:1px solid var(--line); margin-top:58px; padding-top:28px; }
+.comments-section h2 { font-family:'Libre Baskerville',Georgia,serif; font-size:24px; font-weight:400; margin:0 0 24px; }
+.comments-form { border-top:1px solid var(--line); padding-top:24px; display:grid; gap:8px; }
+.comments-form label { font-size:13px; }
+.comments-form label span { color:var(--muted); }
+.comments-form input,.comments-form textarea { width:100%; border:1px solid var(--line); background:transparent; color:var(--ink); padding:12px; font:15px 'DM Sans',Arial,sans-serif; resize:vertical; }
+.comments-form textarea { min-height:120px; }
+.comments-actions { display:flex; align-items:center; gap:14px; margin-top:8px; }
+.comments-actions span { color:var(--muted); font-size:12px; }
+.comment-submit { border:1px solid var(--ink); background:transparent; color:var(--ink); padding:10px 17px; font:500 13px 'DM Sans',Arial,sans-serif; cursor:pointer; }
+.comment-submit:hover { background:var(--ink); color:var(--paper); }
+.comments-note,.comments-status { color:var(--muted); font-size:12px; margin:16px 0 0 !important; }
+.comments-status { color:var(--ink); }
+.comment-list { display:grid; gap:0; margin-top:28px; }
+.comment { border-top:1px solid var(--line); padding:18px 0; }
+.comment p { margin:0 0 6px; font-size:14px; line-height:1.7; }
+.comment .comment-author { font-weight:500; margin-bottom:4px; }
 .submission-note { color:var(--muted); font-size:13px !important; }
 .submit-guidance { border-top:1px solid var(--line); margin:22px 0 30px; padding-top:24px; }
 .submit-guidance h2 { margin:0 0 18px; }
