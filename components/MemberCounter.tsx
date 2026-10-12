@@ -9,14 +9,16 @@ export function MemberCounter({ total }: { total: number }) {
       setCount(total);
       return;
     }
-    const timer = window.setInterval(() => {
-      setCount(current => {
-        const next = Math.min(total, current + 1);
-        if (next === total) window.clearInterval(timer);
-        return next;
-      });
-    }, 18);
-    return () => window.clearInterval(timer);
+    const duration = 7000;
+    const startedAt = performance.now();
+    let frame = 0;
+    const animate = (now: number) => {
+      const progress = Math.min(1, (now - startedAt) / duration);
+      setCount(Math.min(total, Math.max(1, Math.floor(progress * total))));
+      if (progress < 1) frame = window.requestAnimationFrame(animate);
+    };
+    frame = window.requestAnimationFrame(animate);
+    return () => window.cancelAnimationFrame(frame);
   }, [total]);
   return <p className="member-counter" aria-live="polite" aria-atomic="true"><strong>{count}</strong> members and growing</p>;
 }
