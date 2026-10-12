@@ -15,7 +15,7 @@ export function MemberCounter({ total }: { total: number }) {
         if (next === total) window.clearInterval(timer);
         return next;
       });
-    }, 6);
+    }, 12);
     return () => window.clearInterval(timer);
   }, [total]);
   return <p className="member-counter" aria-live="polite" aria-atomic="true"><strong>{count}</strong> members and growing</p>;
